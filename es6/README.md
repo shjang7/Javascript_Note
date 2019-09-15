@@ -72,4 +72,15 @@ const magic = () => new Date()
 const myConcat = (arr1, arr2) => arr1.concat(arr2)
 console.log(myConcat([1, 2], [3, 4, 5]))
 
-https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/write-higher-order-arrow-functions
+### Write Higher Order Arrow Functions
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+const squareList = (arr) => {
+  "use strict";
+  const squaredIntegers = arr.filter((num) => Number.isInteger(num) && num > 0).map((num) => num*num);
+  return squaredIntegers;
+};
+// test your code
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+
+https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/set-default-parameters-for-your-functions
