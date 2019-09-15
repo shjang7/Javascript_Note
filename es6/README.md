@@ -66,3 +66,10 @@ function freezeObj() {
 const PI = freezeObj();
 
 ### Use Arrow Functions
+const magic = () => new Date()
+
+### Write Arrow Functions with parameters
+const myConcat = (arr1, arr2) => arr1.concat(arr2)
+console.log(myConcat([1, 2], [3, 4, 5]))
+
+https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/write-higher-order-arrow-functions
