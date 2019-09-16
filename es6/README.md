@@ -37,11 +37,9 @@ printManyTimes("freeCodeCamp");
 const s = [5, 7, 2];
 function editInPlace() {
   "use strict";
-  // change code below this line
   s[0] = 2;
   s[1] = 5;
   s[2] = 7;
-  // change code above this line
 }
 editInPlace();
 
@@ -52,10 +50,7 @@ function freezeObj() {
     PI: 3.14
   };
   Object.freeze(MATH_CONSTANTS);
-  // change code below this line
 
-
-  // change code above this line
   try {
     MATH_CONSTANTS.PI = 99;
   } catch( ex ) {
@@ -176,12 +171,10 @@ const stats = {
 const half = (function() {
   "use strict"; // do not change this line
 
-  // change code below this line
   return (({max, min}) => {
     // use function argument destructuring
     return (max + min) / 2.0;
   });
-  // change code above this line
 
 })();
 console.log(stats); // should be object
@@ -205,18 +198,15 @@ const resultDisplayArray = makeList(result.failure);
 ### Write Concise Object Literal Declarations Using Simple Fields
 const createPerson = (name, age, gender) => {
   "use strict";
-  // change code below this line
   return {
     name,
     age,
     gender
   };
-  // change code above this line
 };
 console.log(createPerson("Zodiac Hasbro", 56, "male")); // returns a proper object
 
 ### Write Concise Declarative Functions with ES6
-// change code below this line
 const bicycle = {
   gear: 2,
   setGear(newGear) {
@@ -224,7 +214,6 @@ const bicycle = {
     this.gear = newGear;
   }
 };
-// change code above this line
 bicycle.setGear(3);
 console.log(bicycle.gear);
 
