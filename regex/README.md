@@ -8,7 +8,7 @@ let result = myRegex.test(myString);
 ### Match Literal Strings
 ##### case sensitive
 let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
-let waldoRegex = /Waldo/; // Change this line
+let waldoRegex = /Waldo/;
 let result = waldoRegex.test(waldoIsHiding);
 
 ### Match a Literal String with Different Possibilities
@@ -143,32 +143,32 @@ let result = haRegex.test(haStr);
 
 ### Specify Exact Number of Matches
 let timStr = "Timmmmber";
-let timRegex = /Tim{4}ber/; // Change this line
+let timRegex = /Tim{4}ber/;
 let result = timRegex.test(timStr);
 
 ### Check for All or None
 let favWord = "favorite";
-let favRegex = /favou?rite/; // Change this line
+let favRegex = /favou?rite/;
 let result = favRegex.test(favWord);
 
 ### Positive and Negative Lookahead
 let sampleWord = "astronaut";
-let pwRegex = /(?=\w{5,})(?=\D*\d{2})/; // Change this line
+let pwRegex = /(?=\w{5,})(?=\D*\d{2})/;
 let result = pwRegex.test(sampleWord);
 
 ### Reuse Patterns Using Capture Groups
 let repeatNum = "42 42 42";
-let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let reRegex = /^(\d+)\s\1\s\1$/;
 let result = reRegex.test(repeatNum);
 
 ### Use Capture Groups to Search and Replace
 let huhText = "This sandwich is good.";
 let fixRegex = /good/; // Change this line
-let replaceText = "okey-dokey"; // Change this line
+let replaceText = "okey-dokey";
 let result = huhText.replace(fixRegex, replaceText);
 
 ### Remove Whitespace from Start and End
 ##### similar with #trim
 let hello = "   Hello, World!  ";
 let wsRegex = /^\s+|\s+$/g; // Change this line
-let result = hello.replace(wsRegex, ''); // Change this line
+let result = hello.replace(wsRegex, '');
