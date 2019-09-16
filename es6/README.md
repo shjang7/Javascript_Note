@@ -1,4 +1,4 @@
-# [freeCodeCamp](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/)
+# [ES6 update info](https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/)
 ### let keyword
 let catName;
 let quote;
@@ -143,6 +143,147 @@ function getMaxOfTmrw(forecast) {
 
 console.log(getMaxOfTmrw(LOCAL_FORECAST)); // should be 84.6
 
+### Use Destructuring Assignment to Assign Variables from Arrays
+let a = 8, b = 6;
+(() => {
+  "use strict";
+  [b,a]=[a,b];
+})();
+console.log(a); // should be 6
+console.log(b); // should be 8
 
+### Use Destructuring Assignment with the Rest Operator to Reassign Array Elements
+##### same logic: Array.prototype.slice()
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  "use strict";
+  const [,,...arr] = list;
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr); // should be [3,4,5,6,7,8,9,10]
+console.log(source); // should be [1,2,3,4,5,6,7,8,9,10];
 
-https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-arrays
+### Use Destructuring Assignment to Pass an Object as a Function's Parameters
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+const half = (function() {
+  "use strict"; // do not change this line
+
+  // change code below this line
+  return (({max, min}) => {
+    // use function argument destructuring
+    return (max + min) / 2.0;
+  });
+  // change code above this line
+
+})();
+console.log(stats); // should be object
+console.log(half(stats)); // should be 28.015
+
+### Create Strings using Template Literals
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["id-blacklist", "no-dup-keys"]
+};
+function makeList(arr) {
+  "use strict";
+
+  const resultDisplayArray = arr.map(element=>`<li class="text-warning">${element}</li>`);
+
+  return resultDisplayArray;
+}
+const resultDisplayArray = makeList(result.failure);
+
+### Write Concise Object Literal Declarations Using Simple Fields
+const createPerson = (name, age, gender) => {
+  "use strict";
+  // change code below this line
+  return {
+    name,
+    age,
+    gender
+  };
+  // change code above this line
+};
+console.log(createPerson("Zodiac Hasbro", 56, "male")); // returns a proper object
+
+### Write Concise Declarative Functions with ES6
+// change code below this line
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    "use strict";
+    this.gear = newGear;
+  }
+};
+// change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+### Use class Syntax to Define a Constructor Function
+function makeClass() {
+  "use strict";
+  class Vegetable {
+    constructor(name){
+      this.name = name;
+    }
+  }
+  return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // => should be 'carrot'
+
+### Use getters and setters to Control Access to an Object
+function makeClass() {
+  "use strict";
+  class Thermostat{
+    constructor(fahrenheit){
+      this._fahrenheit = fahrenheit;
+    }
+    get temperature() {
+      return this._celsius = 5 / 9 * (this._fahrenheit - 32);
+    }
+    set temperature(celsius) {
+      this._fahrenheit = celsius * 9.0 / 5 + 32;
+    }
+  }
+  return Thermostat;
+}
+const Thermostat = makeClass();
+const thermos = new Thermostat(76); // setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in C
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in C
+
+### Understand the Differences Between import and require
+"use strict";
+import { capitalizeString } from "string_functions";
+capitalizeString("hello!");
+
+### Use export to Reuse a Code Block
+"use strict";
+export const foo = "bar";
+export const bar = "foo";
+
+### Use * to Import Everything from a File
+"use strict";
+import * as str from "capitalize_strings";
+
+### Create an Export Fallback with export default
+##### Note: Since export default is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. Additionally, you cannot use export default with var, let, or const
+"use strict";
+export default function subtract(x,y) {return x - y;}
+
+### Import a Default Export
+"use strict";
+import subtract from "math_functions";
+subtract(7,4);
