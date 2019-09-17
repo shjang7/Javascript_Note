@@ -144,4 +144,174 @@ foods['strawberries'] = 27;
 console.log(foods);
 
 ### Modify an Object Nested Within an Object
-https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/modify-an-object-nested-within-an-object
+let userActivity = {
+  id: 23894201352,
+  date: 'January 1, 2017',
+  data: {
+    totalUsers: 51,
+    online: 42
+  }
+};
+
+// change code below this line
+userActivity.data.online = 45;
+// change code above this line
+
+console.log(userActivity);
+
+### Access Property Names with Bracket Notation
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+// do not change code above this line
+
+function checkInventory(scannedItem) {
+  // change code below this line
+  return foods[scannedItem];
+}
+
+// change code below this line to test different cases:
+console.log(checkInventory("apples"));
+
+### Use the delete Keyword to Remove Object Properties
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+// change code below this line
+delete foods.oranges;
+delete foods.plums;
+delete foods.strawberries;
+// change code above this line
+
+console.log(foods);
+
+### Check if an Object has a Property
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(obj) {
+  // change code below this line
+  return obj.hasOwnProperty('Alan', 'Jeff', 'Sarah', 'Ryan');
+  // change code above this line
+}
+
+console.log(isEveryoneHere(users));
+
+### Iterate Through the Keys of an Object with a for...in Statement
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function countOnline(obj) {
+  // change code below this line
+  let count = 0;
+  for (let name in obj) {
+    if(users[name].online) {
+      count = count + 1;
+    }
+  }
+  return count;
+  // change code above this line
+}
+
+console.log(countOnline(users));
+
+### Generate an Array of All Object Keys with Object.keys()
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function getArrayOfUsers(obj) {
+  // change code below this line
+  return Object.keys(obj);
+  // change code above this line
+}
+
+console.log(getArrayOfUsers(users));
+
+### Modify an Array Stored in an Object
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
+  }
+};
+
+function addFriend(userObj, friend) {
+  // change code below this line  
+  userObj.data.friends.push(friend);
+  return userObj.data.friends;
+  // change code above this line
+}
+
+console.log(addFriend(user, 'Pete'));
