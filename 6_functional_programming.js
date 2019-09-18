@@ -185,7 +185,7 @@ console.log(bookList);
 ### Use the map Method to Extract Data from an Array
 // the global variable
 var watchList = [
-                 {  
+                 {
                    "Title": "Inception",
                    "Year": "2010",
                    "Rated": "PG-13",
@@ -207,7 +207,7 @@ var watchList = [
                    "Type": "movie",
                    "Response": "True"
                 },
-                {  
+                {
                    "Title": "Interstellar",
                    "Year": "2014",
                    "Rated": "PG-13",
@@ -251,7 +251,7 @@ var watchList = [
                    "Type": "movie",
                    "Response": "True"
                 },
-                {  
+                {
                    "Title": "Batman Begins",
                    "Year": "2005",
                    "Rated": "PG-13",
@@ -319,7 +319,7 @@ var new_s = s.myMap(function(item){
 ### Use the filter Method to Extract Data from an Array
 // the global variable
 var watchList = [
-                 {  
+                 {
                    "Title": "Inception",
                    "Year": "2010",
                    "Rated": "PG-13",
@@ -341,7 +341,7 @@ var watchList = [
                    "Type": "movie",
                    "Response": "True"
                 },
-                {  
+                {
                    "Title": "Interstellar",
                    "Year": "2014",
                    "Rated": "PG-13",
@@ -385,7 +385,7 @@ var watchList = [
                    "Type": "movie",
                    "Response": "True"
                 },
-                {  
+                {
                    "Title": "Batman Begins",
                    "Year": "2005",
                    "Rated": "PG-13",
@@ -496,7 +496,7 @@ nonMutatingPush(first, second);
 ### Use the reduce Method to Analyze Data
 // the global variable
 var watchList = [
-                 {  
+                 {
                    "Title": "Inception",
                    "Year": "2010",
                    "Rated": "PG-13",
@@ -518,7 +518,7 @@ var watchList = [
                    "Type": "movie",
                    "Response": "True"
                 },
-                {  
+                {
                    "Title": "Interstellar",
                    "Year": "2014",
                    "Rated": "PG-13",
@@ -562,7 +562,7 @@ var watchList = [
                    "Type": "movie",
                    "Response": "True"
                 },
-                {  
+                {
                    "Title": "Batman Begins",
                    "Year": "2005",
                    "Rated": "PG-13",
