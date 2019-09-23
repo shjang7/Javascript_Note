@@ -1,3 +1,4 @@
+# scrimba
 # decimal point
 let example = 7.77
 console.log(example.toFixed(5))
@@ -252,3 +253,5 @@ const thermos = new Thermostat(76);
 let temp = thermos.temperature;
 thermos.temperature = 26;
 temp = thermos.temperature;
+
+# 
